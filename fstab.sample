@@ -1,0 +1,8 @@
+# /etc/fstab
+# uses drive UUID (find in fdisk) to mount media on boot
+#
+#add line to fstab for auto mount on boot
+#lvm drive vgpool-lvstuff
+
+#UUID                                     /mount/Location partitionType errorHandling 0 1
+UUID=d11ac683-a914-4d9d-a8df-e4296db325b5 /mnt/Media ext3 errors=remount-ro 0 1
