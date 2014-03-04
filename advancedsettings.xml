@@ -1,0 +1,24 @@
+<advancedsettings>
+   <loglevel hide="false">0</loglevel>
+
+  <cputempcommand>sensors|sed -ne "s/temp1: \+[-+]\([0-9]\+\).*/\1 C/p"</cputempcommand>
+
+  <gputempcommand>/usr/bin/aticonfig --od-gettemperature | grep Temperature | cut -f 2 -d "-" | cut -f 1 -d "." | sed -e "s, ,," | sed 's/$/ C/'</gputempcommand>
+
+  <gui>    
+    <algorithmdirtyregions>3</algorithmdirtyregions>
+    <nofliptimeout>0</nofliptimeout>
+  </gui>    
+
+<video>
+  <latency>
+    <delay>0</delay>
+    <refresh>
+      <min>23</min>
+      <max>24</max>
+      <delay>175</delay> <!-- set to zero or adjust if audio seems out of sync with 24p movies -->
+     </refresh>
+  </latency>
+</video>
+
+</advancedsettings>
